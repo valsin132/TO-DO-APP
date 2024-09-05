@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { ToDoContext } from '../contexts/ToDoContext';
 import { RiDeleteBin2Line } from "react-icons/ri";
 
-const BookDetails = ({task}) => {
+const TaskDetails = ({task}) => {
     const {removeTask} = useContext(ToDoContext);
     // const {isLightTheme, light, dark} = useContext(ThemeContext);
     // const theme = isLightTheme ? light : dark;
@@ -12,12 +12,12 @@ const BookDetails = ({task}) => {
     return ( 
         <li>
             <div>
-                <div className="title">{task.title}</div>
-                <div className="author">{task.author}</div>
+                <div className="task">{task.task}</div>
+                <div className="description">{task.description}</div>
             </div>
-            <RiDeleteBin2Line onClick={() => removeTask(task.id)} />
+            <RiDeleteBin2Line className='delete-icon' onClick={() => removeTask(task.id)} />
         </li>
      );
 }
  
-export default BookDetails;
+export default TaskDetails;

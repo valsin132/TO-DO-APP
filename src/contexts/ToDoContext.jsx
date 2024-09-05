@@ -14,8 +14,8 @@ const ToDoContextProvider = (props) => {
         localStorage.setItem('tasks', JSON.stringify(tasks))
     }, [tasks]);
 
-    const addTask = (title, author) => {
-        setTasks([...tasks, {title, author, id: uuidv4()}])
+    const addTask = (task, description) => {
+        setTasks([...tasks, {task, description, id: uuidv4()}])
     };
 
     const removeTask = (id) => {

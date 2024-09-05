@@ -1,16 +1,16 @@
 import {useContext} from 'react'
 import { ToDoContext } from '../contexts/ToDoContext';
-import BookDetails from './BookDetails';
+import TaskDetails from './TaskDetails';
 
-const BookList = () => {
+const TaskList = () => {
     const {tasks} = useContext(ToDoContext);
     return tasks.length
     ? (
-        <div className='book-list'>
+        <div className='task-list'>
             <ul>
                 {tasks.map(task => {
                     return (
-                        <BookDetails task={task} key={task.id} />
+                        <TaskDetails task={task} key={task.id} />
                     )
                 })}
             </ul>
@@ -21,4 +21,4 @@ const BookList = () => {
     );
 }
  
-export default BookList;
+export default TaskList;

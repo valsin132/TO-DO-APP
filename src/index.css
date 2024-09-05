@@ -26,31 +26,38 @@ body {
 }
 
 /* book details */
-.book-list {
+.task-list {
   margin:20px;
 }
 
-.book-list ul {
-  padding:0;
-  list-style:none;
+.task-list ul {
+  padding: 0;
+  list-style: none;
 }
 
-.book-list li {
-  padding:10px;
-  margin:10px 0;
+.task-list li {
+  padding: 10px;
+  margin: 10px 0;
   background-color: #FEFBBD;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 0.5rem;
 }
 
-.book-list .title {
+.task-list .task {
   font-weight: bold;
   font-size: 1.2em;
 }
 
-.book-list .author {
+.task-list .description {
   font-size: 0.9em;
+}
+
+.delete-icon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  cursor: pointer;
 }
 
 .empty {
@@ -58,8 +65,9 @@ body {
   margin: 20px;
 }
 
-/* book form */
-form {padding: 20px;}
+form {
+  padding: 30px;
+}
 
 input[type='text'] {
   width: 100%;
@@ -78,4 +86,5 @@ input[type='submit'] {
   display: block;
   border-radius: 0.5rem;
   background-color: #99EDC3;
+  cursor: pointer;
 }

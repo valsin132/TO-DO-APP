@@ -1,15 +1,15 @@
 import Navbar from "./components/Navbar";
 import ToDoContextProvider from "./contexts/ToDoContext";
-import BookList from "./components/Knygos";
-import BookForm from "./components/BookForm";
+import TaskList from "./components/TaskList";
+import TaskForm from "./components/TaskForm";
 
 function App() {
   return (
     <div className="App">
         <ToDoContextProvider>
           <Navbar />
-          <BookForm />
-          <BookList />
+          <TaskForm />
+          <TaskList />
         </ToDoContextProvider>  
     </div>
   );
