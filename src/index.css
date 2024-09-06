@@ -8,10 +8,10 @@ body {
   background-color: #fff;
 }
 
-.App {
+.app {
     max-width:600px;
-    margin:30px auto;
-    color: black;
+    margin:1rem auto;
+    color: #000;
     border: 3px solid #99EDC3;
     border-radius: 1rem;
 }
@@ -87,4 +87,24 @@ input[type='submit'] {
   border-radius: 0.5rem;
   background-color: #99EDC3;
   cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.7rem;
+  padding-top: 2rem;
+}
+
+@media (max-width: 576px) {
+  .app {
+    border: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .footer {
+    margin-top: auto;
+  }
 }
