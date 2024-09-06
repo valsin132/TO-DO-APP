@@ -16,16 +16,28 @@ body {
     border-radius: 1rem;
 }
 
-.navbar {
-  padding: 10px 20px;
+.nav-wrapper {
   text-align: center;
 }
 
-.navbar h1 {
+.logo {
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding-right: 1rem;
+}
+
+.logo h1 {
   margin: 10px 0;
 }
 
-/* book details */
 .task-list {
   margin:20px;
 }
