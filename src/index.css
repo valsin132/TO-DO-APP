@@ -68,10 +68,22 @@ body {
   font-size: 0.9em;
 }
 
+.task-list li.task-completed {
+  background-color: #99EDC3;
+  text-decoration: line-through;
+}
+
+.complete-icon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  cursor: pointer;
+}
+
 .delete-icon {
   min-width: 1.5rem;
   min-height: 1.5rem;
   cursor: pointer;
+  padding-right: 0.5rem;
 }
 
 .empty {
