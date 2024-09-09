@@ -1,10 +1,14 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app-wrapper {
   background-color: #fff;
 }
 
@@ -14,7 +18,7 @@ body {
     color: #000;
     border: 3px solid #99EDC3;
     border-radius: 1rem;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1); 
 }
 
 .nav-wrapper {
@@ -35,7 +39,7 @@ body {
   padding-right: 1rem;
 }
 
-.logo h1 {
+.logo-name {
   margin: 10px 0;
 }
 
@@ -59,18 +63,23 @@ body {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
 
-.task-list .task {
+.task {
   font-weight: bold;
   font-size: 1.2em;
 }
 
-.task-list .description {
+.description {
   font-size: 0.9em;
 }
 
 .task-list li.task-completed {
   background-color: #99EDC3;
   text-decoration: line-through;
+}
+
+.task-icons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .complete-icon {
@@ -83,7 +92,6 @@ body {
   min-width: 1.5rem;
   min-height: 1.5rem;
   cursor: pointer;
-  padding-right: 0.5rem;
 }
 
 .empty {
@@ -107,6 +115,7 @@ input[type='text'] {
 }
 
 input[type='submit'] {
+  color: #000;
   margin: 10px auto;
   padding: 6px 20px;
   border: none;

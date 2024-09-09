@@ -17,7 +17,7 @@ const TaskList = () => {
         </div>
     )
     : (
-        <div className="empty">Seems lonely in here, what are you up to?</div>
+        <div className='empty'>Seems lonely in here, what are you up to?</div>
     );
 }
  
