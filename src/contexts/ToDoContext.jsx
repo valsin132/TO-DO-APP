@@ -15,15 +15,24 @@ const ToDoContextProvider = (props) => {
     }, [tasks]);
 
     const addTask = (task, description) => {
-        setTasks([...tasks, {task, description, id: uuidv4()}])
+        setTasks([...tasks, {task, description, isCompleted: false, id: uuidv4()}])
     };
 
     const removeTask = (id) => {
         setTasks(tasks.filter(task => task.id !== id))
     };
 
+    const toggleTaskCompletion = (id) => {
+        setTasks(
+            tasks.map(task => 
+                task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+            )
+        );
+    };
+    
+
     return (
-        <ToDoContext.Provider value={{tasks, addTask, removeTask}}>
+        <ToDoContext.Provider value={{tasks, addTask, removeTask, toggleTaskCompletion}}>
             {props.children}
         </ToDoContext.Provider>
     );

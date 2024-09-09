@@ -1,22 +1,21 @@
 /* eslint-disable react/prop-types */
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 // import { ThemeContext } from '../contexts/ThemeContext';
 import { ToDoContext } from '../contexts/ToDoContext';
 import { RiDeleteBin2Line } from "react-icons/ri";
 import { MdOutlineDoneOutline } from "react-icons/md";
 
 const TaskDetails = ({task}) => {
-    const [completed, setCompleted] = useState(false);
-    const {removeTask} = useContext(ToDoContext);
+    const {removeTask, toggleTaskCompletion} = useContext(ToDoContext);
     // const {isLightTheme, light, dark} = useContext(ThemeContext);
     // const theme = isLightTheme ? light : dark;
-
     const handleComplete = () => {
-        setCompleted(!completed)
-    }
+        toggleTaskCompletion(task.id)
+    };
 
+    
     return ( 
-        <li className={completed ? 'task-completed' : ''}>
+        <li className={task.isCompleted ? 'task-completed' : ''}>
             <div>
                 <div className="task">{task.task}</div>
                 <div className="description">{task.description}</div>
