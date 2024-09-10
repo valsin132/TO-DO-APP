@@ -15,8 +15,8 @@ const Navbar = () => {
                 <FaTasks className='logo-icon' />
                 <h1 className='logo-name'>To-Do List</h1>
             </div>
-            <p>All my tasks: {tasks.length}</p>
             <ThemeToggle />
+            <p>All my tasks: {tasks.length}</p>
         </nav>
     );
 }

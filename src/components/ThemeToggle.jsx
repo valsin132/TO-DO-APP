@@ -1,10 +1,11 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
+import { MdLightMode } from "react-icons/md";
 
 const ThemeToggle = () => {
     const {toggleTheme} = useContext(ThemeContext)
     return ( 
-        <button onClick={toggleTheme}>Light Mode / Dark Mode</button>
+        <MdLightMode className='theme-mode-icon' onClick={toggleTheme} />
      );
 }
  
