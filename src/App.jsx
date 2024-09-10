@@ -6,7 +6,7 @@ import TaskForm from "./components/TaskForm";
 import Footer from "./components/Footer";
 import { useContext } from 'react';
 
-function App() {
+const App = () => {
   return (
       <ThemeContextProvider>
         <ToDoContextProvider>
@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-function AppContent() {
+const AppContent = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
   const theme = isLightTheme ? light : dark;
 
