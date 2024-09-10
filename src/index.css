@@ -91,7 +91,8 @@ body {
 
 .task-icons {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.7rem;
+  align-items: center;
 }
 
 .complete-icon {
@@ -101,8 +102,8 @@ body {
 }
 
 .delete-icon {
-  min-width: 1.5rem;
-  min-height: 1.5rem;
+  min-width: 1.2rem;
+  min-height: 1.2rem;
   cursor: pointer;
 }
 
