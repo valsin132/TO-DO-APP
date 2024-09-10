@@ -9,7 +9,7 @@ const ThemeContextProvider = ( props ) => {
     const theme = {
         isLightTheme,
         light: { syntax: '#000', bg: '#fff' },
-        dark: { syntax: '#fff', bg: '#18191A' }
+        dark: { syntax: '#fff', bg: '#151922' }
     };
 
     const toggleTheme = () => {
