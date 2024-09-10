@@ -21,8 +21,8 @@ function AppContent() {
   const theme = isLightTheme ? light : dark;
 
   return (
-    <div className='app-wrapper'>
-      <div className="app" style={{ background: theme.bg }}>
+    <div className='app-wrapper' style={{ background: theme.bg }}>
+      <div className='app'>
         <Navbar />
         <TaskForm />
         <TaskList />

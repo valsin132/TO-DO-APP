@@ -1,9 +1,13 @@
 import {useContext} from 'react'
 import { ToDoContext } from '../contexts/ToDoContext';
+import{ ThemeContext } from '../contexts/ThemeContext';
 import TaskDetails from './TaskDetails';
 
 const TaskList = () => {
     const {tasks} = useContext(ToDoContext);
+    const { isLightTheme, light, dark } = useContext(ThemeContext);
+    const theme = isLightTheme ? light : dark;
+
     return tasks.length
     ? (
         <div className='task-list'>
@@ -17,7 +21,7 @@ const TaskList = () => {
         </div>
     )
     : (
-        <div className='empty'>Seems lonely in here, what are you up to?</div>
+        <div className='empty' style={{ color: theme.syntax }}>Seems lonely in here, what are you up to?</div>
     );
 }
  
