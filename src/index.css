@@ -1,3 +1,11 @@
+:root {
+  --green-1: #99EDC3;
+  --green-2: #3DED97;
+  --black: #000;
+  --yellow: #FEFBBD; 
+  --purple-1: #D6B4FC;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,8 +28,8 @@ body {
     max-width: 700px;
     min-height: 600px;
     margin: 0 auto;
-    color: #000;
-    border: 3px solid #99EDC3;
+    color: var(--black);
+    border: 3px solid var(--green-1);
     border-radius: 1rem;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
@@ -70,7 +78,7 @@ body {
 .task-list li {
   padding: 10px;
   margin: 10px 0;
-  background-color: #FEFBBD;
+  background-color: var(--yellow);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +96,7 @@ body {
 }
 
 .task-list li.task-completed {
-  background-color: #99EDC3;
+  background-color: var(--green-1);
   text-decoration: line-through;
 }
 
@@ -125,22 +133,27 @@ input[type='text'] {
   box-sizing: border-box;
   margin: 6px 0;
   border: none;
-  background-color: #D6B4FC;
+  background-color: var(--purple-1);
   border-radius: 0.5rem;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
 
 input[type='submit'] {
-  color: #000;
+  color: var(--black);
   margin: 10px auto;
   padding: 6px 20px;
   border: none;
   display: block;
   border-radius: 0.5rem;
-  background-color: #99EDC3;
+  background-color: var(--green-1);
   cursor: pointer;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
+
+input[type='submit']:active {
+  background-color: var(--green-2);
+}
+
 
 .footer {
   text-align: center;
