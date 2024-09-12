@@ -1,10 +1,17 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 export const ThemeContext = createContext();
 
 const ThemeContextProvider = ( props ) => {
-    const [isLightTheme, setIsLightTheme] = useState(true);
+    const [isLightTheme, setIsLightTheme] = useState(() => {
+        const storedTheme = localStorage.getItem('isLightTheme');
+        return storedTheme ? JSON.parse(storedTheme) : true;
+    });
+
+    useEffect(() => {
+        localStorage.setItem('isLightTheme', JSON.stringify(isLightTheme))
+    }, [isLightTheme]);
 
     const theme = {
         isLightTheme,

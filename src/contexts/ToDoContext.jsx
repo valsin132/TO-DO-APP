@@ -6,8 +6,8 @@ export const ToDoContext = createContext()
 
 const ToDoContextProvider = (props) => {
     const [tasks, setTasks] = useState(() => {
-        const localData = localStorage.getItem('tasks')
-        return localData ? JSON.parse(localData) : []
+        const localData = localStorage.getItem('tasks');
+        return localData ? JSON.parse(localData) : [];
     });
 
     useEffect(() => {
