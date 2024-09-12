@@ -2,16 +2,16 @@ import { useContext, useState } from "react";
 import { ToDoContext } from "../contexts/ToDoContext";
 
 const TaskForm = () => {
-    const {addTask} = useContext(ToDoContext)
-    const [task, setTask] = useState('')
-    const [description, setDescription] = useState('')
+    const {addTask} = useContext(ToDoContext);
+    const [task, setTask] = useState('');
+    const [description, setDescription] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault()
         addTask(task, description)
         setTask('')
         setDescription('')
-    }
+    };
 
     return ( 
         <form onSubmit={handleSubmit}>
