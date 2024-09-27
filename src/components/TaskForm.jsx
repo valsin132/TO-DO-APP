@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { LuPlus } from "react-icons/lu";
 import { ToDoContext } from "../contexts/ToDoContext";
 
 const TaskForm = () => {
@@ -17,7 +18,9 @@ const TaskForm = () => {
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Task" value={task} required onChange={(e) => setTask(e.target.value)}/>
             <input type="text" placeholder="Description" value={description}  onChange={(e) => setDescription(e.target.value)}/>
-            <input type="submit" value="Add new To-Do" />
+            <button className="add-button" type="submit">
+                <LuPlus className="add-icon" />Add new To-Do
+            </button>
         </form>
      );
 }
