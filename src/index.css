@@ -20,6 +20,7 @@ body {
 .app-wrapper {
   padding: 2rem 0;
   min-height: 100vh;
+  transition: 0.5s;
 }
 
 .app {
@@ -179,11 +180,12 @@ input[type="text"] {
 
 .add-button {
   color: var(--black);
+  font-size: 1rem;
   font-weight: 600;
   margin: 10px auto;
   padding: 10px 30px;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   background-color: var(--green-1);
   cursor: pointer;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
@@ -191,6 +193,11 @@ input[type="text"] {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.add-button:hover {
+  transform: translateX(-2px) translateY(-2px);
 }
 
 .add-button:active {
@@ -198,8 +205,8 @@ input[type="text"] {
 }
 
 .add-icon {
-  height: 1.2rem;
-  width: 1.2rem;
+  height: 1.3rem;
+  width: 1.3rem;
 }
 
 .footer {
@@ -210,6 +217,7 @@ input[type="text"] {
 }
 
 @media (max-width: 576px) {
+  
   .app-wrapper {
     padding: 0;
   }
